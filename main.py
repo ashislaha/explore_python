@@ -158,17 +158,26 @@ class Person:
     def __str__(self):
         return f"Name is {self.name} and address is in {self.address}, born in {self.dob}, age = {self.age()}"
 
+    def __len__(self):
+        # currently returning the person name char count value
+        return len(self.name)
+    def __del__(self):
+        print(f"Person obj deleted with detail - name: {self.name}")
+    
     def age(self):
         # get current year and return year - dob
         currentTime = datetime.datetime.now()
         return currentTime.year - int(self.dob)
+    
+    def speak(self):
+        raise NotImplementedError("Subclass must implement this method - abstraction method")
 
 person = Person("Ashis", "India", "1989")
 print(person)
 
 class ChildPerson(Person):
     def __init__(self, name, address, dob, school):
-        super().__init__(name, address, dob)
+        super().__init__(name, address, dob) #Person.__init__(name, address, dob)
         self.school = school
     
     # polymorphism -- override __str__(self) and update string of the subclass.
