@@ -5,7 +5,7 @@ import os
 import matplotlib
 import matplotlib.pyplot as plot
 import numpy as np
-
+  
 # formatting string
 name = "Ashis"
 print("Hello {}".format(name))
@@ -247,4 +247,3 @@ print("matplot version ", matplotlib.__version__)
 print("Numpy version ", np.__version__)
 arr = np.array([[1,2,3,4], [10, 20, 30, 40]])
 print("input array dimention -->", arr.ndim)
-
