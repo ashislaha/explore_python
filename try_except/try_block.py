@@ -32,6 +32,8 @@ def scan_a_number():
         finally:
             print("scanning is completed")
 
+
+
 if __name__ == "__main__":
     input1 = input("Enter a number")
     sum(input1, 10)
